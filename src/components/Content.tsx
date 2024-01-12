@@ -1,9 +1,8 @@
-import { ContentProps } from '../types';
+import { CoursePart } from '../types';
+import Part from './Part';
 
-const Content = ({ name, exerciseCount }: ContentProps) => (
-  <p>
-    {name} {exerciseCount}
-  </p>
+const Content = ({ courseParts }: { courseParts: CoursePart[] }) => (
+  <Part courseParts={courseParts} />
 );
 
 export default Content;
