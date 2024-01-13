@@ -48,6 +48,19 @@ const Part = ({ courseParts }: { courseParts: CoursePart[] }) => {
                 </p>
               </div>
             );
+          case 'special':
+            return (
+              <div key={part.name}>
+                <p>
+                  <b>
+                    {part.name} {part.exerciseCount}
+                  </b>
+                  <br />
+                  <i>{part.description}</i> <br />
+                  required skills: {part.requirements.join(', ')}
+                </p>
+              </div>
+            );
           default:
             return assertNever(part);
         }
